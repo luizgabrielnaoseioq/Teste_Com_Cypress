@@ -5,5 +5,7 @@ describe('template spec', () => {
 
   it('passes', () => {
     cy.visitx("/products")
+
+    cy.url().should('include', '/products')
   })
 })
