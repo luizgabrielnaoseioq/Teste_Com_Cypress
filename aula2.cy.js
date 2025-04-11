@@ -1,6 +1,9 @@
 describe('template spec', () => {
-  it('passes', () => {
-    cy.visitx("/login")
+  beforeEach(() => {
+    cy.login(Cypress.env("username"), Cypress.env("password"))
+  })
 
+  it('passes', () => {
+    cy.visitx("/products")
   })
 })
