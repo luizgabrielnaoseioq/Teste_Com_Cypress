@@ -3,17 +3,21 @@ describe('template spec', () => {
     cy.login(Cypress.env("username"), Cypress.env("password"))
   })
 
-  // Teste único de produto genérico
-  it('createProduct ', () => {
-    cy.createProduct()
-  })
+  it('Fornecedor Com CNPJ Muito Grande', () => {
+    cy.fornecedorComCPFMuitoGrante()
+  });
 
-  // Repete 100 vezes com nomes únicos
-  Cypress._.times(100, (i) => {
-    it(`Cria o produto #${i + 1}`, () => {
-      cy.createProduct(`Produto ${i + 1}`)
-    })
-  })
+  // // Teste único de produto genérico
+  // it('createProduct ', () => {
+  //   cy.createProduct()
+  // })
+  //
+  // // Repete 100 vezes com nomes únicos
+  // Cypress._.times(100, (i) => {
+  //   it(`Cria o produto #${i + 1}`, () => {
+  //     cy.createProduct(`Produto ${i + 1}`)
+  //   })
+  // })
 
   // Outros testes comentados ou futuros
   // it('passes', () => {
